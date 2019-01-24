@@ -1,4 +1,4 @@
-# static routing
+# dynamic routing
 
 ### 前提
 
@@ -7,7 +7,12 @@
 
 ### 部署
 
-接下来，设置规则，所有的流量都转到服务的v1版本
+设置规则，使得用户`jason`访问`reviews:v2`版本，其他用户方为v1版本
+
+```
+kubectl apply -f dynamic-routing/virtual-service-reviews-test-v2.yml
+```
 
 ### 验证
 
+登录jason（不需要密码）访问v2版本，可以看到黑色星星，不登录或者使用其他用户则访问v1版本，无星星

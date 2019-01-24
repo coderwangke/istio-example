@@ -1,6 +1,8 @@
 # istio-example
 通过bookinfo的例子，可以体验istio的流量管理过程
 
+参考来自[istio/example](https://github.com/istio/istio/tree/master/samples/bookinfo)
+
 ### 前提
 
 平台选择k8s，并且已安装istio
@@ -33,8 +35,6 @@ bookinfo.yml描述了bookinfo应用的deployment和service，就是简单的k8s�
 kubectl label namespace default istio-injection=enabled
 ```
 
-查看
-
 接下来，部署应用bookinfo
 
 ```
@@ -57,11 +57,12 @@ kubectl apply -f bookinfo-gateway.yml
 kubectl get svc istio-ingressgateway -n istio-system
 
 # 显示
-
+NAME                   TYPE           CLUSTER-IP      EXTERNAL-IP      PORT(S)                                                                                                                   AGE
+istio-ingressgateway   LoadBalancer   10.39.245.229   35.221.131.137   80:31380/TCP,443:31390/TCP,31400:31400/TCP,15011:31314/TCP,8060:30706/TCP,853:30684/TCP,15030:32002/TCP,15031:32463/TCP   14d
 
 ```
 
-接下来，浏览器输入http://external-ip/productpage访问即可
+接下来，浏览器输入`http://EXTERNAL-IP/productpage`访问即可
 
 
 ### 其他实例

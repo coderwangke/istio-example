@@ -1,4 +1,4 @@
-# static routing
+# weight-based routing
 
 ### 前提
 
@@ -7,10 +7,12 @@
 
 ### 部署
 
-首先，设置destination-rule
 
+设置规则，实现50%的流量都转到v1版本，50%的流量转到v3版本
 
-接下来，设置规则，所有的流量都转到服务的v1版本
+```
+kubectl apply -f weight-based/virtual-service-reviews-50-v3.yml
+```
 
 ### 验证
-
+返回浏览器，访问`http://EXTERNAL-IP/productpage`，刷新多次，大约有50%的机会看到红色星星
