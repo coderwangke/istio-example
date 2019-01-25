@@ -1,5 +1,7 @@
 # dynamic routing
 
+根据请求的user字段，修改请求的访问的版本
+
 ### 前提
 
 - 已经部署好bookinfo应用，并且可以访问

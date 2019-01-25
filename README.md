@@ -71,3 +71,4 @@ istio-ingressgateway   LoadBalancer   10.39.245.229   35.221.131.137   80:31380/
 - dynamic-routing
 - fault-injection
 - weight-based
+- policy

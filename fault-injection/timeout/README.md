@@ -1,5 +1,7 @@
 # static routing
 
+设置请求的超时时间
+
 ### 前提
 
 - 已经部署好bookinfo应用，并且可以访问

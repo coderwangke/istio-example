@@ -1,5 +1,7 @@
 # static routing
 
+所有的请求都将访问服务的v1版本
+
 ### 前提
 
 - 已经部署好bookinfo应用，并且可以访问
