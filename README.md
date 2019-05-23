@@ -33,6 +33,8 @@ bookinfo.yml描述了bookinfo应用的deployment和service，就是简单的k8s�
 
 ```
 kubectl label namespace default istio-injection=enabled
+
+kubectl get namespace -L istio-injection
 ```
 
 接下来，部署应用bookinfo
